@@ -3,7 +3,7 @@
 <html lang="em">
     <head>
         <meta charset="utf-8" />
-        <title>Archives | Essentialia</title>
+        <title>随笔 | Essentialia</title>
         <meta name="author" content="Essentialia" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -28,6 +28,13 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.min.css" />
 
 
 
@@ -85,81 +92,38 @@
 </transition>
 
             <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-                
-<div id="archives">
-    
-    <div id="timeline-wrap" ref="timeline">
+                <div class="article">
+    <div>
+        <h1>随笔</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/5
+        </span>
         
-        <div class="timeline" data-title="欢迎来到本站!">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/9/30</div>
-                <a href="/2023/09/30/Essentialia/">
-                    <h3>欢迎来到本站!</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="什么是vac，信任因素，它们究竟在csgo，cs2中起到了什么作用">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/9/30</div>
-                <a href="/2023/09/30/vac_system/">
-                    <h3>什么是VAC，信任因素，它们究竟在CSGO，CS2中起到了什么作用</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" style="color: #00bcd4">实用教程</a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="【代购】代购作弊订阅">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/10/21</div>
-                <a href="/2023/10/21/daigou_sub/">
-                    <h3>【代购】代购作弊订阅</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="随笔">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/11/5</div>
-                <a href="/2023/11/05/nah-1/">
-                    <h3>随笔</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
         
     </div>
+    
+    <div class="content" v-pre>
+        <p>男人的人生无非几大趣事:</p>
+<p>打飞机 吃饭 睡觉 玩游戏 喝饮料 健身</p>
+<p>没了</p>
+
+    </div>
+    
+    
+    
+    <div id="comment">
+        <div id="gitalk-container"></div>
+    </div>
+    
+    
+    
+    
+    
 </div>
 
                 <footer id="footer">
@@ -190,6 +154,26 @@
             
         </div>
         <script src="/js/main.js"></script>
+        
+        
+
+<script>
+    const gitalk = new Gitalk({
+        clientID: "708e9d3882d46c853131",
+        clientSecret: "57cf11e444c1967efdb8f740c73c4a5c35816e6d",
+        repo: "",
+        owner: "",
+        admin: "".split(","),
+        language: "zh-CN",
+        id: location.pathname,
+        
+    })
+    gitalk.render("gitalk-container");
+</script>
+
+
+
+
         
     <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
